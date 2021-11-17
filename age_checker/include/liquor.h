@@ -2,7 +2,7 @@
 #define LIQUOR_H
 #include "person.h"
 
-const int LEGAL_AGE=18;
+#define LEGAL_AGE 18
 
 typedef enum {
     VODKA,

@@ -7,7 +7,8 @@
 typedef enum {
     VODKA,
     GIN,
-    BEER
+    BEER,
+    KALUA
 } Liquor_type;
 
 /**

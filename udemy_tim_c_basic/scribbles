@@ -1,0 +1,5 @@
+instuction set 
+fetch/execute cycle: fetch instuction from memory and execute.
+
+compile:
+gcc -c filename -o executable.o

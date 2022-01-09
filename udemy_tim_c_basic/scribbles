@@ -1,5 +1,47 @@
-instuction set 
+### instuction set 
 fetch/execute cycle: fetch instuction from memory and execute.
 
-compile:
-gcc -c filename -o executable.o
+### c notes:
+c is extensively used to write compilers.
+c standard - c89(Widely used)/c99/c11(Less used, latest)
+c gives more freedom -> more responsibility.
+main is the entry point of c programs.
+
+### compile:
+gcc filename -o executable.o
+
+### compilation:
+c code to machine instruction.
+It has two steps:
+1. preprocessing.
+2. actual complation to generate machine code/object code.
+
+
+### linking:
+As name suggests its grabs all dependencies and creates a executable.
+without -c option in gcc it does automatic linking.
+
+
+###  Summary of c programs:
+write -> compile -> link -> execute
+
+### comments:
+/*
+multi line code
+*/
+
+// single line 
+
+### preprocessor:
+- compile time utility.
+- used in constants. 
+- including libraries.
+- conditional preprocessor directives are supported.
+
+### headers:
+- function declaration is present usually.
+- We hide the source code logic. Creating abstraction.
+- We keep the main source in different file and header will have just function declaration.
+- angular brackets: file present in standard c directories
+- double quotes, it first check in current directory.
+

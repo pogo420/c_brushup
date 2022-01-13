@@ -45,3 +45,13 @@ multi line code
 - angular brackets: file present in standard c directories
 - double quotes, it first check in current directory.
 
+### variables /function imp:
+declaire 
+initialize (assign value)
+definition (for functions)
+
+### datatype modification  using type specifiers
+short , long and unsigned.
+short int -> uses less memory for int
+long int -> more moremory than int
+unsigned -> non negative values.

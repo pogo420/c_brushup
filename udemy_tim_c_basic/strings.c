@@ -21,5 +21,17 @@ int main(int argc, char const *argv[])
     strncpy(str4, str, sizeof(str4));  // specifying the bytes prevents buffer overflow
     printf("str :%s\n", str4);
 
+    printf("%s\n", strchr("hello", 'e'));
+    printf("%s\n", strstr("hello", "ello"));
+    
+    char data[] = "Hello World, its great planet..!"; // use char array mode, using pointer mode it creates a readonly string.
+    char* token = strtok(data, " ");
+
+    while (token != NULL)
+    {
+        printf("%s\n", token);
+        token = strtok(NULL, " ");
+    }
+
     return 0;
 }

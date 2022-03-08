@@ -9,6 +9,7 @@ int main(int argc, char const *argv[])
     char str2[6] = "hello"; // one additional for null character \0
     char str3[6] = {'h', 'e', 'l', 'l', 'o', '\n'};
     char str4[10];
+    char* str5 = "hello boss";
 
     printf("%s\n",str);
     printf("%s\n",str2);
@@ -32,6 +33,16 @@ int main(int argc, char const *argv[])
         printf("%s\n", token);
         token = strtok(NULL, " ");
     }
+
+
+    printf("%s\n", str5);
+
+    // iterating string 
+    while(*str5) {
+        printf("%c\n", *str5);
+        str5 ++;
+    }
+
 
     return 0;
 }

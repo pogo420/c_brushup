@@ -1,4 +1,5 @@
 # include <stdio.h>
+# include <string.h>
 
 struct date
 {
@@ -9,6 +10,30 @@ struct date
 };
 
 struct date today = {2, 4, 1990}; // initialization 
+
+
+struct person
+{
+    /* data */
+    char name[100];
+    int age;
+    struct address
+    {
+        /* data */
+        char house_name[200];
+        int pincode;
+    } address;
+} p1;
+
+
+void print_person(struct person *p)
+{
+    printf("Name: %s\n", p->name);
+    printf("Age: %d\n", p->age);
+    printf("Address:\n");
+    printf("House: %s\n", p->address.house_name);
+    printf("Pincode: %d\n", p->address.pincode);
+}
 
 
 
@@ -28,6 +53,12 @@ int main(int argc, char const *argv[])
         printf("%d-%d-%d\n", dates[i].day, dates[i].month, dates[i].year);  
     }
 
+    strncpy(p1.name, "arnab", 100);
+    strncpy(p1.address.house_name, "AhadOpus", 200);
+    p1.age = 32;
+    p1.address.pincode = 35;
+
+    print_person(&p1);
 
     return 0;
 }

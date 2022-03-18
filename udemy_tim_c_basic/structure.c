@@ -1,5 +1,7 @@
 # include <stdio.h>
 # include <string.h>
+# include <stdlib.h>
+
 
 struct date
 {
@@ -21,6 +23,7 @@ struct person
     {
         /* data */
         char house_name[200];
+        char* dynamic_string;
         int pincode;
     } address;
 } p1;
@@ -33,6 +36,7 @@ void print_person(struct person *p)
     printf("Address:\n");
     printf("House: %s\n", p->address.house_name);
     printf("Pincode: %d\n", p->address.pincode);
+    printf("Dynamic string: %s\n", p->address.dynamic_string);
 }
 
 
@@ -41,6 +45,7 @@ int main(int argc, char const *argv[])
 {
     printf("%d-%d-%d\n", today.day, today.month, today.year);  
 
+    char* string_data = "HelloGodzilla!";
     struct date dates[3];
 
     for(int i = 0; i < 3; i++) {
@@ -55,6 +60,9 @@ int main(int argc, char const *argv[])
 
     strncpy(p1.name, "arnab", 100);
     strncpy(p1.address.house_name, "AhadOpus", 200);
+
+    p1.address.dynamic_string = (char*) malloc(strlen(string_data) + 1);
+    strncpy(p1.address.dynamic_string, string_data, strlen(string_data));
     p1.age = 32;
     p1.address.pincode = 35;
 
